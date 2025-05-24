@@ -133,12 +133,7 @@ const App: React.FC = () => {
       phone: formData.phone,
       attending: formData.attending,
       guestCount: formData.guestCount,
-      events: {
-        mehendi: formData.events.mehendi,
-        haldi: formData.events.haldi,
-        wedding: formData.events.wedding,
-        vratam: formData.events.vratam,
-      },
+      events: formData.events,
     };
 
     try {
@@ -149,14 +144,27 @@ const App: React.FC = () => {
         body: JSON.stringify(payload),
       });
 
-      // Optional: scroll to confirmation
+      alert("RSVP submitted—thank you!");
+
+      // ✅ Reset form
+      setFormData({
+        name: "",
+        phone: "",
+        attending: "yes",
+        guestCount: 1,
+        events: {
+          mehendi: true,
+          haldi: true,
+          wedding: true,
+          vratam: true,
+        },
+      });
+
       setTimeout(() => {
         document
           .getElementById("confirmation")
           ?.scrollIntoView({ behavior: "smooth" });
       }, 100);
-
-      alert("RSVP submitted—thank you!");
     } catch (err) {
       console.error("RSVP error:", err);
       alert("Submission failed—please try again.");
@@ -439,9 +447,10 @@ const App: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="(123) 456-7890"
-                    pattern="[0-9]*"
+                    placeholder="Enter 10-digit phone"
                     inputMode="numeric"
+                    pattern="[0-9]{10}"
+                    maxLength={10}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
                     required
                   />
