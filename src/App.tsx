@@ -334,11 +334,11 @@ const App: React.FC = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-base md:text-lg">D/O</p>
-                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
+                <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                   Mr. Devarasetty Venkata Apparao
                 </p>
                 <p className="text-base md:text-lg">&</p>
-                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
+                <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                   Mrs. Pandu Ranga Vital Kumari
                 </p>
               </div>
@@ -360,18 +360,18 @@ const App: React.FC = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-base md:text-lg">S/O</p>
-                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
+                <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                   Mr. Machavarapu Bhupathi Rao (Late)
                 </p>
                 <p className="text-base md:text-lg">&</p>
-                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
+                <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                   Mrs. Indira (Late)
                 </p>
                 <div className="mt-4">
-                  <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
+                  <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                     Brother: Machavarapu Vamsinadh
                   </p>
-                  <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
+                  <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                     Sister-in-law: Jaisree
                   </p>
                 </div>
