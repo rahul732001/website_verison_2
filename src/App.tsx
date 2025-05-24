@@ -9,7 +9,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 import "./index.css";
-
+const sheetWebhookUrl =
+  "https://script.google.com/macros/s/AKfycbyW5YlCoHdgkWhk-CeUv19fXQeOUI1z8EwjXgZxKVQNUv9dTiN3npo4TJBHUHvjZZT4/exec";
 type Event = {
   title: string;
   date: string;
@@ -123,15 +124,43 @@ const App: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
     setSubmitted(true);
-    setTimeout(() => {
-      document
-        .getElementById("confirmation")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
+
+    const payload = {
+      name: formData.name,
+      phone: formData.phone,
+      attending: formData.attending,
+      guestCount: formData.guestCount,
+      events: {
+        mehendi: formData.events.mehendi,
+        haldi: formData.events.haldi,
+        wedding: formData.events.wedding,
+        vratam: formData.events.vratam,
+      },
+    };
+
+    try {
+      await fetch(sheetWebhookUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      // Optional: scroll to confirmation
+      setTimeout(() => {
+        document
+          .getElementById("confirmation")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+
+      alert("RSVP submitted—thank you!");
+    } catch (err) {
+      console.error("RSVP error:", err);
+      alert("Submission failed—please try again.");
+    }
   };
 
   return (
