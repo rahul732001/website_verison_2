@@ -108,6 +108,38 @@ const App: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+    // Special case: attending = "no"
+    if (name === "attending" && value === "no") {
+      setFormData((prev) => ({
+        ...prev,
+        attending: "no",
+        guestCount: 0,
+        events: {
+          mehendi: false,
+          haldi: false,
+          wedding: false,
+          vratam: false,
+        },
+      }));
+      return;
+    }
+
+    // If they switch back to "yes", restore default guestCount=1
+    if (name === "attending" && value === "yes") {
+      setFormData((prev) => ({
+        ...prev,
+        attending: "yes",
+        guestCount: 1,
+      }));
+      return;
+    }
+
+    // Phone field sanitization
+    if (name === "phone") {
+      const numbersOnly = value.replace(/\D/g, "").slice(0, 10);
+      setFormData((prev) => ({ ...prev, [name]: numbersOnly }));
+      return;
+    }
     setFormData((prev) => ({
       ...prev,
       [name]: name === "phone" ? value.replace(/\D/g, "") : value,
@@ -302,11 +334,11 @@ const App: React.FC = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-base md:text-lg">D/O</p>
-                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
+                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
                   Mr. Devarasetty Venkata Apparao
                 </p>
                 <p className="text-base md:text-lg">&</p>
-                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
+                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
                   Mrs. Pandu Ranga Vital Kumari
                 </p>
               </div>
@@ -328,18 +360,18 @@ const App: React.FC = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-base md:text-lg">S/O</p>
-                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
+                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
                   Mr. Machavarapu Bhupathi Rao (Late)
                 </p>
                 <p className="text-base md:text-lg">&</p>
-                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
+                <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
                   Mrs. Indira (Late)
                 </p>
                 <div className="mt-4">
-                  <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
+                  <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
                     Brother: Machavarapu Vamsinadh
                   </p>
-                  <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
+                  <p className="text-base md:text-lg font-cormorant text-deep-brown mb-2">
                     Sister-in-law: Jaisree
                   </p>
                 </div>
@@ -434,7 +466,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-6 md:p-8">
             <h2 className="text-2xl md:text-4xl text-center font-cormorant font-semibold mb-6 text-deep-brown">
-              RSVP once—done in 30 seconds.
+              RSVP once—done in 10 seconds.
             </h2>
 
             {!submitted ? (
