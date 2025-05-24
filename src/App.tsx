@@ -174,16 +174,16 @@ const App: React.FC = () => {
   return (
     <div className="font-poppins">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-start pt-28 pb-10 px-4 bg-white text-center overflow-hidden bg-[url('/background.jpg')] bg-cover bg-top bg-no-repeat">
+      <section className="relative flex flex-col items-center justify-start pt-24 pb-10 px-4 text-center bg-[url('/background.jpg')] bg-top bg-no-repeat bg-contain">
         {/* Heading Bar */}
-        <div className="z-10 w-full text-center py-3 bg-gold/90 text-white">
-          <h1 className="text-base sm:text-lg font-cormorant tracking-wider">
+        <div className="z-10 bg-gold/90 text-white py-2 px-4 rounded-md shadow-md backdrop-blur-sm">
+          <h1 className="text-base sm:text-lg font-cormorant font-bold tracking-wider">
             Wedding Invitation
           </h1>
         </div>
 
         {/* Ganesha Image */}
-        <div className="z-10 mt-6">
+        <div className="z-10 mt-5">
           <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-gold shadow-xl bg-white mx-auto">
             <img
               src="/god.png"
@@ -194,17 +194,16 @@ const App: React.FC = () => {
         </div>
 
         {/* Names & Date */}
-        <div className="z-10 mt-6 px-4">
-          <h2 className="text-3xl sm:text-4xl font-cormorant font-bold text-deep-brown mb-2">
+        <div className="z-10 mt-5 px-4 max-w-md">
+          <h2 className="text-3xl sm:text-4xl font-cormorant font-bold text-deep-brown mb-1">
             Apuroopa & Arvind
           </h2>
-          <p className="text-base sm:text-lg text-gray-700 mb-4">
+          <p className="text-base sm:text-lg text-gray-700 mb-2">
             August 16, 2025
           </p>
-          <p className="text-sm sm:text-base italic text-gray-600 mb-6">
-            We’d be over the moon to celebrate with you —
-            <br className="sm:hidden" />
-            tap RSVP to save your seat.
+          <p className="text-sm sm:text-base italic font-bold text-gray-600 mb-4 leading-relaxed">
+            We’d be over the moon to celebrate with you — tap RSVP to save your
+            seat.
           </p>
           <button
             onClick={() =>
@@ -218,8 +217,8 @@ const App: React.FC = () => {
           </button>
         </div>
 
-        {/* Scroll Down Button */}
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce z-20">
+        {/* Down Arrow */}
+        <div className="z-10 mt-6">
           <button
             onClick={() =>
               document
@@ -228,7 +227,7 @@ const App: React.FC = () => {
             }
             className="text-black"
           >
-            <ChevronDown size={32} />
+            <ChevronDown size={24} />
           </button>
         </div>
       </section>
@@ -286,11 +285,11 @@ const App: React.FC = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-base md:text-lg">D/O</p>
-                <p className="text-base md:text-lg font-cormorant">
+                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
                   Mr. Devarasetty Venkata Apparao
                 </p>
                 <p className="text-base md:text-lg">&</p>
-                <p className="text-base md:text-lg font-cormorant">
+                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
                   Mrs. Pandu Ranga Vital Kumari
                 </p>
               </div>
@@ -312,18 +311,18 @@ const App: React.FC = () => {
               </p>
               <div className="space-y-2">
                 <p className="text-base md:text-lg">S/O</p>
-                <p className="text-base md:text-lg font-cormorant">
+                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
                   Mr. Machavarapu Bhupathi Rao (Late)
                 </p>
                 <p className="text-base md:text-lg">&</p>
-                <p className="text-base md:text-lg font-cormorant">
+                <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
                   Mrs. Indira (Late)
                 </p>
                 <div className="mt-4">
-                  <p className="text-base md:text-lg font-cormorant">
+                  <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
                     Brother: Machavarapu Vamsinadh
                   </p>
-                  <p className="text-base md:text-lg font-cormorant">
+                  <p className="text-md md:text-lg font-cormorant font-semibold text-deep-brown">
                     Sister-in-law: Jaisree
                   </p>
                 </div>
@@ -331,7 +330,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <p className="text-center text-lg mt-12 text-deep-brown italic">
+          <p className="text-center text-lg mt-12 text-deep-brown italic font-semibold">
             We can't wait for you to meet the people who made us who we are.
           </p>
         </div>
