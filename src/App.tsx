@@ -313,7 +313,7 @@ const App: React.FC = () => {
       <section className="relative py-20 bg-[url('/background.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-3xl md:text-4xl text-center font-cormorant font-semibold mb-16 text-deep-brown">
+          <h2 className="mt-12 text-3xl md:text-4xl text-center font-cormorant font-semibold mb-16 text-deep-brown">
             Our Families
           </h2>
 
@@ -374,14 +374,14 @@ const App: React.FC = () => {
                   <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                     Sister-in-law: Jaisree
                   </p>
+                  <p className="text-center text-lg mt-14 text-deep-brown italic font-semibold">
+                    We can't wait for you to meet the people who made us who we
+                    are.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-
-          <p className="text-center text-lg mt-12 text-deep-brown italic font-semibold">
-            We can't wait for you to meet the people who made us who we are.
-          </p>
         </div>
       </section>
 
