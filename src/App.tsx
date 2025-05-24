@@ -174,10 +174,7 @@ const App: React.FC = () => {
   return (
     <div className="font-poppins">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-start pt-28 pb-10 px-4 bg-white text-center overflow-hidden">
-        {/* Floral Frame */}
-        <div className="fixed inset-0 -z-10 bg-[url('/background.jpg')] bg-cover bg-top bg-no-repeat"></div>
-
+      <section className="relative min-h-screen flex flex-col items-center justify-start pt-28 pb-10 px-4 bg-white text-center overflow-hidden bg-[url('/background.jpg')] bg-cover bg-top bg-no-repeat">
         {/* Heading Bar */}
         <div className="z-10 w-full text-center py-3 bg-gold/90 text-white">
           <h1 className="text-base sm:text-lg font-cormorant tracking-wider">
@@ -265,7 +262,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Family Section */}
-      <section className="relative py-20 bg-[url('https://images.pexels.com/photos/3098320/pexels-photo-3098320.jpeg')] bg-cover bg-center">
+      <section className="relative py-20 bg-[url('/background.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl md:text-4xl text-center font-cormorant font-semibold mb-16 text-deep-brown">
@@ -413,7 +410,11 @@ const App: React.FC = () => {
       </section>
 
       {/* RSVP Section */}
-      <section id="rsvp">
+      <section
+        id="rsvp"
+        className="relative bg-[url('/background.jpg')] bg-cover bg-center py-20"
+      >
+        <div className="absolute inset-0 bg-white/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-6 md:p-8">
             <h2 className="text-2xl md:text-4xl text-center font-cormorant font-semibold mb-6 text-deep-brown">
@@ -626,6 +627,9 @@ const App: React.FC = () => {
           </p>
           <p className="mt-4 text-gold flex items-center justify-center">
             <Heart size={18} className="mr-1" /> Apuroopa & Arvind
+          </p>
+          <p className="mt-4 text-gold flex items-center justify-center">
+            #Arupoo
           </p>
         </div>
       </footer>
