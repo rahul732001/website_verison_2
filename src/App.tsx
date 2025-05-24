@@ -168,10 +168,7 @@ const App: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-start pt-28 pb-10 px-4 bg-white text-center overflow-hidden">
         {/* Floral Frame */}
-        <div
-          className="absolute inset-0 z-0 bg-no-repeat bg-cover pointer-events-none"
-          style={{ backgroundImage: "url('/background.png')" }}
-        />
+        <div className="fixed inset-0 -z-10 bg-[url('/background.png')] bg-cover bg-top bg-no-repeat"></div>
 
         {/* Heading Bar */}
         <div className="z-10 w-full text-center py-3 bg-gold/90 text-white">
