@@ -174,51 +174,68 @@ const App: React.FC = () => {
   return (
     <div className="font-poppins">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-start pt-24 pb-10 px-4 text-center bg-[url('/background.jpg')] bg-top bg-no-repeat bg-contain">
-        {/* Heading Bar */}
-        <div className="z-10 bg-gold/90 text-white py-2 px-4 rounded-md shadow-md backdrop-blur-sm">
-          <h1 className="text-base sm:text-lg font-cormorant font-bold tracking-wider">
-            Wedding Invitation
-          </h1>
-        </div>
+      <section
+        className="
+    relative
+    flex flex-col items-center justify-center
+    min-h-screen
+    px-6 py-24
+    bg-[url('/background.jpg')]
+    bg-cover bg-center
+    text-center
+    overflow-hidden
+  "
+      >
+        {/* Soft white overlay for legibility */}
+        <div className="absolute inset-0 bg-white/30"></div>
 
-        {/* Ganesha Image */}
-        <div className="z-10 mt-5">
-          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-gold shadow-xl bg-white mx-auto">
+        {/* Content */}
+        <div className="relative z-10 space-y-8 max-w-lg mx-auto">
+          {/* Badge */}
+          <div className="inline-block bg-gold/90 text-white py-3 px-8 rounded-md shadow-md">
+            <h1 className="text-2xl sm:text-3xl font-cormorant tracking-wide">
+              Wedding Invitation
+            </h1>
+          </div>
+
+          {/* Ganesha */}
+          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-gold shadow-2xl bg-white overflow-hidden mx-auto">
             <img
               src="/god.png"
               alt="Lord Ganesha"
               className="w-full h-full object-cover"
             />
           </div>
-        </div>
 
-        {/* Names & Date */}
-        <div className="z-10 mt-5 px-4 max-w-md">
-          <h2 className="text-3xl sm:text-4xl font-cormorant font-bold text-deep-brown mb-1">
+          {/* Couple’s Names */}
+          <h2 className="text-4xl sm:text-5xl font-cormorant font-bold text-deep-brown">
             Apuroopa & Arvind
           </h2>
-          <p className="text-base sm:text-lg text-gray-700 mb-2">
-            August 16, 2025
-          </p>
-          <p className="text-sm sm:text-base italic font-bold text-gray-600 mb-4 leading-relaxed">
+
+          {/* Date */}
+          <p className="text-lg sm:text-xl text-gray-700">August 16, 2025</p>
+
+          {/* Subtext */}
+          <p className="text-base sm:text-lg italic text-gray-600 leading-relaxed">
             We’d be over the moon to celebrate with you — tap RSVP to save your
             seat.
           </p>
+
+          {/* RSVP Button */}
           <button
             onClick={() =>
               document
                 .getElementById("rsvp")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="bg-gold text-white px-6 py-2 text-sm rounded-full shadow hover:bg-gold-dark transition"
+            className="bg-gold text-white px-10 py-4 text-lg rounded-full font-semibold shadow hover:bg-gold-dark transition"
           >
             RSVP
           </button>
         </div>
 
         {/* Down Arrow */}
-        <div className="z-10 mt-6">
+        <div className="absolute bottom-8 left-0 right-0 flex justify-center z-10">
           <button
             onClick={() =>
               document
@@ -227,7 +244,7 @@ const App: React.FC = () => {
             }
             className="text-black"
           >
-            <ChevronDown size={24} />
+            <ChevronDown size={32} />
           </button>
         </div>
       </section>
