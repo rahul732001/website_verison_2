@@ -674,7 +674,7 @@ const App: React.FC = () => {
             <Heart size={18} className="mr-1" /> Apuroopa & Arvind
           </p>
           <p className="mt-4 text-gold flex items-center justify-center">
-            #Arupuwedding
+            #Arupupellipilupu
           </p>
         </div>
       </footer>
