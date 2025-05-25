@@ -313,7 +313,7 @@ const App: React.FC = () => {
       <section className="relative py-20 bg-[url('/background.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="mt-12 text-3xl md:text-4xl text-center font-cormorant font-semibold mb-16 text-deep-brown">
+          <h2 className="mt-20 text-3xl md:text-4xl text-center font-cormorant font-semibold mb-16 text-deep-brown">
             Our Families
           </h2>
 
