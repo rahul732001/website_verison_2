@@ -313,7 +313,7 @@ const App: React.FC = () => {
       <section className="relative py-20 bg-[url('/background.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="mt-20 text-3xl md:text-4xl text-center font-cormorant font-semibold mb-16 text-deep-brown">
+          <h2 className="mt-28 text-3xl md:text-4xl text-center font-cormorant font-semibold mb-16 text-deep-brown">
             Our Families
           </h2>
 
@@ -373,10 +373,6 @@ const App: React.FC = () => {
                   </p>
                   <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                     Sister-in-law: Jaisree
-                  </p>
-                  <p className="text-center text-lg mt-14 text-deep-brown italic font-semibold">
-                    We can't wait for you to meet the people who made us who we
-                    are.
                   </p>
                   <p className="text-center text-lg mt-14 text-deep-brown italic font-semibold"></p>
                 </div>
@@ -678,7 +674,7 @@ const App: React.FC = () => {
             <Heart size={18} className="mr-1" /> Apuroopa & Arvind
           </p>
           <p className="mt-4 text-gold flex items-center justify-center">
-            #Arupoo
+            #Arupuwedding
           </p>
         </div>
       </footer>
