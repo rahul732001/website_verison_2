@@ -374,6 +374,11 @@ const App: React.FC = () => {
                   <p className="text-base md:text-lg font-cormorant font-bold text-deep-brown mb-2">
                     Sister-in-law: Jaisree
                   </p>
+                  <p className="text-center text-lg mt-14 text-deep-brown italic font-semibold">
+                    We can't wait for you to meet the people who made us who we
+                    are.
+                  </p>
+                  <p className="text-center text-lg mt-14 text-deep-brown italic font-semibold"></p>
                 </div>
               </div>
             </div>
