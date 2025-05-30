@@ -347,7 +347,7 @@ const App: React.FC = () => {
             <div className="text-center">
               <div className="mb-6 mx-auto w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg border-4 border-gold">
                 <img
-                  src="/groom.jpeg"
+                  src="/groom1.jpeg"
                   alt="Groom"
                   className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
                 />
